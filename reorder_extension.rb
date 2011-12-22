@@ -10,6 +10,7 @@ class ReorderExtension < Radiant::Extension
     admin.page.index.add :sitemap_head, "order_header"
     admin.page.index.add :node, "order"
     admin.page.index.add :top, 'header'
+    admin.page.edit.add :extended_metadata, "page_auto_order"
     Page.send :include, Reorder::PageExtensions
     Admin::PagesController.send :include, Reorder::PagesControllerExtensions
     Admin::PagesController.send :helper, Reorder::PageHelper

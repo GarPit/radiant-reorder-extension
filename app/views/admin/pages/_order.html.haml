@@ -1,2 +1,2 @@
 - unless simple
-  %td.order= level > 0 ? order_links(page) : ""
+  %td.order= level > 0 ? (order_links(page) unless page.parent.auto_order_children) : ""
